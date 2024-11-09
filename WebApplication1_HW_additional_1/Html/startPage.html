@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Введите свое имя</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .form-group input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .submit-btn:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Введите свое имя</h2>
+        <form method="post" action="/api/greeting">
+            <div class="form-group">
+                <label for="userName">Имя</label>
+                <input type="text" id="userName" name="userName" required>
+            </div>
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
